@@ -24,7 +24,7 @@ class App extends React.Component {
           id: 2,
           title: 'POS-Моноблок GS-A4',
           img: 'monoblog.jpeg',
-          desc: 'allianceservice',
+          desc: 'Intel® Core I3-4030 4th CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
           price: '24.900сом'
         },
@@ -32,13 +32,13 @@ class App extends React.Component {
           id: 3,
           title: 'Winson WNI-8014P ',
           img: 'chek.png',
-          desc: 'Мини-ручной сканер штрих-кода',
+          desc: ' Мини-ручной сканер штрих-кода с дисплеем Беспроводной портативный сканер штрих-кода',
           category: 'scaner',
           price: '8600сом'
         },
         {
           id: 4,
-          title: 'кнопка вызова официанта',
+          title: 'Кнопка вызова официанта',
           img: 'call.webp',
           desc: 'allianceservice',
           category: 'knopca',
@@ -48,7 +48,7 @@ class App extends React.Component {
           id: 5,
           title: 'Считыватель бесконтактных смарт карт RFID',
           img: 'kard.webp',
-          desc: 'allianceservice',
+          desc: 'RFID считыватель для смарт карт IC R20C-USB-8H10D USB',
           category: 'smart card reader',
           price: '1700с'
         },
@@ -56,7 +56,7 @@ class App extends React.Component {
           id: 6,
           title: 'ASUS Laptop 15 A516EA ',
           img: 'nout.png',
-          desc: 'allianceservice',
+          desc: 'Можете рассчитывать на комфорт в использовании. Аппаратная конфигурация основана на производительном процессоре Intel Core i3 и оперативной памяти 8 ГБ. Для максимального комфорта использования, ноутбук оснащен дисплеем NanoEdge с углами обзора 178 градусов и накопителем SSD объемом 512 ГБ.',
           category: 'nout',
           price: '37.000сом'
         }

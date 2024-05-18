@@ -63,7 +63,7 @@ export default function Header(props) {
       setCurrentContent(images[currentIndex]);
     }
 
-    const interval = setInterval(changeBackgroundContent, 5000);
+    const interval = setInterval(changeBackgroundContent, 10000);
     setCurrentContent(images[currentIndex]);
 
     return () => clearInterval(interval);

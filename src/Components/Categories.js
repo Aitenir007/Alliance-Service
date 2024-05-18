@@ -18,11 +18,11 @@ export default class categories extends Component {
             },
             {
                 key:'scaner',
-                name:'сканеры'
+                name:'Сканеры штрих-кода'
             },
             {
                 key:'knopca',
-                name:'кнопка для вызова официанта'
+                name:'Кнопка для вызова официанта'
             },
             {
                 key:'smart card reader',
@@ -30,7 +30,7 @@ export default class categories extends Component {
             },
             {
                 key:'nout',
-                name:'ноутбуки'
+                name:'Ноутбуки'
             },
             ]
         }
