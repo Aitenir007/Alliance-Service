@@ -10,7 +10,7 @@ export default class categories extends Component {
             },
             {
                 key:'printer',
-                name:'принтеры'
+                name:'принтеры чеков и этикеток'
             },
             {
                 key:'POS-monoblog',
@@ -32,6 +32,14 @@ export default class categories extends Component {
                 key:'nout',
                 name:'Ноутбуки'
             },
+            {
+                key:'displei',
+                name:'Дисплей Покупателя'
+            },
+            {
+                key:'drawers',
+                name:'Денежный ящики'
+            }
             ]
         }
     }
