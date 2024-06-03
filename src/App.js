@@ -2,15 +2,13 @@ import React from 'react';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Items from './Components/Items';
-import Categories from './Components/Categories';
 import ShowFullItem from './Components/ShowFullItem';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      orders: [],
-      currentItems: [],
+      orders: JSON.parse(localStorage.getItem('orders')) || [],
       items: [
         {
           id: 1,
@@ -343,7 +341,7 @@ class App extends React.Component {
         {
           id: 42,
           title: 'Принтеры чеков  мобильный',
-          img: 'blueblyat.jpeg',
+          img: '',
           desc: 'Xprinter 58mm XP-P300 - USB+Bluetooth',
           category: 'printer',
           price: '4000сом'
@@ -351,7 +349,7 @@ class App extends React.Component {
         {
           id: 43,
           title: 'Принтеры чеков  мобильный POS-Терминал XP-P1 ',
-          img: 'xp.jpeg',
+          img: '',
           desc: 'адаптер со встроеным принтером.',
           category: 'printer',
           price: '6850сом'
@@ -359,7 +357,7 @@ class App extends React.Component {
         {
           id: 44,
           title: 'Принтеры чеков  Xprinter F260L',
-          img: 'xprinter-f260l.jpg',
+          img: '',
           desc: 'Xprinter F260L',
           category: 'printer',
           price: '6000сом'
@@ -367,7 +365,7 @@ class App extends React.Component {
         {
           id: 45,
           title: 'Принтеры чеков  Xprinter Q260III',
-          img: 'p.jpg',
+          img: '',
           desc: 'Xprinter Q260III',
           category: 'printer',
           price: '7900сом'
@@ -375,7 +373,7 @@ class App extends React.Component {
         {
           id: 46,
           title: 'Принтеры чеков Rongta RP328',
-          img: 'rongta-rp328.jpg',
+          img: '',
           desc: 'Rongta RP328',
           category: 'printer',
           price: '7500сом'
@@ -383,7 +381,7 @@ class App extends React.Component {
         {
           id: 47,
           title: 'Принтеры чеков Rongta RP335  ',
-          img: 'hap.jpeg',
+          img: '',
           desc: 'Rongta RP335  ',
           category: 'printer',
           price: '6000сом'
@@ -391,7 +389,7 @@ class App extends React.Component {
         {
           id: 48,
           title: 'Принтеры чеков Xprinter K200L   ',
-          img: 'xprinter-k200l.jpg',
+          img: '',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+Bluetooth ',
           category: 'printer',
           price: '6500сом'
@@ -399,7 +397,7 @@ class App extends React.Component {
         {
           id: 49,
           title: 'Принтеры чеков Xprinter K200L USB+WiFi   ',
-          img: 'xprinter-k200l.jpg',
+          img: '',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+WiFi ',
           category: 'printer',
           price: '6500сом'
@@ -407,7 +405,7 @@ class App extends React.Component {
         {
           id: 50,
           title: 'Принтеры чеков Xprinter K200L USB+LAN  ',
-          img: 'xprinter-k200l.jpg',
+          img: '',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+LAN ',
           category: 'printer',
           price: '4800сом'
@@ -415,7 +413,7 @@ class App extends React.Component {
         {
           id: 51,
           title: 'Принтеры чеков Xprinter Q80A ',
-          img: 'DSC_5000.jpg',
+          img: '',
           desc: 'Xprinter Q80A  80mm 230mm/s,Black-USB+LAN ',
           category: 'printer',
           price: '4500сом'
@@ -423,7 +421,7 @@ class App extends React.Component {
         {
           id: 52,
           title: 'Принтеры чеков Xprinter A160H ',
-          img: 'prit.jpg',
+          img: '',
           desc: 'Xprinter A160H  ',
           category: 'printer',
           price: '4200сом'
@@ -431,7 +429,7 @@ class App extends React.Component {
         {
           id: 53,
           title: 'Принтеры чеков Xprinter Q200',
-          img: '200.jpg',
+          img: '',
           desc: 'Xprinter Q200  ',
           category: 'printer',
           price: '6200сом'
@@ -439,7 +437,7 @@ class App extends React.Component {
         {
           id: 54,
           title: 'Принтеры чеков Xprinter A260',
-          img: 'xprinter-a260.jpg',
+          img: '',
           desc: 'Xprinter A260  ',
           category: 'printer',
           price: '7100сом'
@@ -447,7 +445,7 @@ class App extends React.Component {
         {
           id: 55,
           title: 'Принтеры чеков Xprinter N160II',
-          img: 'sdjpg.jpg',
+          img: '',
           desc: 'Xprinter N160II ',
           category: 'printer',
           price: '6500сом'
@@ -455,7 +453,7 @@ class App extends React.Component {
         {
           id: 56,
           title: 'Принтеры чеков XP-200W',
-          img: '200w.jpeg',
+          img: '',
           desc: 'XP-200W ',
           category: 'printer',
           price: '6500сом'
@@ -463,7 +461,7 @@ class App extends React.Component {
         {
           id: 57,
           title: 'Принтеры чеков Xprinter C260M',
-          img: 'C260Mjpg.jpg',
+          img: '',
           desc: ' C260M - USB+LAN+RS232 ',
           category: 'printer',
           price: '6800сом'
@@ -471,7 +469,7 @@ class App extends React.Component {
         {
           id: 58,
           title: 'Принтер чеков - Xprinter 80mm XP-P810 - USB+Bluetooth',
-          img: 'prijpg.jpg',
+          img: '',
           desc: 'Xprinter 80mm XP-P810 - USB+Bluetooth ',
           category: 'printer',
           price: '5700сом'
@@ -479,7 +477,7 @@ class App extends React.Component {
         {
           id: 59,
           title: 'Принтер чеков мобильный - Xprinter XP-P801A',
-          img: '-p801a.jpg',
+          img: '',
           desc: 'Xprinter XP-P801A ',
           category: 'printer',
           price: '5700сом'
@@ -487,7 +485,7 @@ class App extends React.Component {
         {
           id: 60,
           title: 'Принтер этикеток Xprinter XP-365B ',
-          img: '365.jpg',
+          img: '',
           desc: 'Xprinter XP-365B ',
           category: 'printer',
           price: '3550сом'
@@ -495,7 +493,7 @@ class App extends React.Component {
         {
           id: 61,
           title: 'Принтер этикеток Xprinter XP-365B  ',
-          img: '365.jpg',
+          img: '',
           desc: '20-80mm receipt&label USB+LAN ',
           category: 'printer',
           price: '5800сом'
@@ -503,7 +501,7 @@ class App extends React.Component {
         {
           id: 62,
           title: 'Термотрансферный принтер XPrinter-TT437B 300DPI',
-          img: 'tt437b.jpg',
+          img: '',
           desc: ' XPrinter-TT437B 300DPI',
           category: 'printer',
           price: '15.000сом'
@@ -511,7 +509,7 @@ class App extends React.Component {
         {
           id: 63,
           title: 'Термотрансферный принтер XPrinter-T451E 300DPI',
-          img: 'ter.webp',
+          img: '',
           desc: ' XPrinter-T451E 300DPI',
           category: 'printer',
           price: '17.900сом'
@@ -519,7 +517,7 @@ class App extends React.Component {
         {
           id: 64,
           title: 'Термотрансферный принтер Xprinter XP-350B ',
-          img: 'x.jpg',
+          img: '',
           desc: ' Xprinter XP-350B ',
           category: 'printer',
           price: '5800сом'
@@ -527,7 +525,7 @@ class App extends React.Component {
         {
           id: 65,
           title: 'Термотрансферный принтер Xprinter XP-370B  ',
-          img: 'xprinter370b.jpg',
+          img: '',
           desc: ' Xprinter XP-370B  ',
           category: 'printer',
           price: '7000сом'
@@ -535,7 +533,7 @@ class App extends React.Component {
         {
           id: 66,
           title: 'Термотрансферный принтер Xprinter XP-480B   ',
-          img: 'xprinter480b.jpg',
+          img: '',
           desc: ' Xprinter XP-480B   ',
           category: 'printer',
           price: '8000сом'
@@ -543,7 +541,7 @@ class App extends React.Component {
         {
           id: 67,
           title: 'Термотрансферный принтер Xprinter XP-DT325B  ',
-          img: 'xprinter-xp-dt325b.jpg',
+          img: '',
           desc: ' Xprinter XP-DT325B ',
           category: 'printer',
           price: '6500сом'
@@ -551,7 +549,7 @@ class App extends React.Component {
         {
           id: 68,
           title: 'Термотрансферный принтер Xprinter XP-Q371',
-          img: '371.jpg',
+          img: '',
           desc: ' Xprinter XP-Q371 ',
           category: 'printer',
           price: '4700сом'
@@ -559,7 +557,7 @@ class App extends React.Component {
         {
           id: 69,
           title: 'Термотрансферный принтер Xprinter XP-420B ',
-          img: 'fdf.jpg',
+          img: '',
           desc: ' Xprinter XP-420B  ',
           category: 'printer',
           price: '6500сом'
@@ -567,7 +565,7 @@ class App extends React.Component {
         {
           id: 70,
           title: 'Термотрансферный принтер Xprinter XP-DT425B ',
-          img: 'dt425b.jpg',
+          img: '',
           desc: ' Xprinter XP-DT425B ',
           category: 'printer',
           price: '6800сом'
@@ -575,7 +573,7 @@ class App extends React.Component {
         {
           id: 71,
           title: 'Термотрансферный принтер Xprinter XP-303B',
-          img: '303b.jpg',
+          img: '',
           desc: 'Xprinter XP-303B ',
           category: 'printer',
           price: '5000сом'
@@ -583,7 +581,7 @@ class App extends React.Component {
         {
           id: 72,
           title: 'Термотрансферный принтер Xprinter 60mm XP-P210  ',
-          img: 'p210.jpg',
+          img: '',
           desc: 'Xprinter 60mm XP-P210 ',
           category: 'printer',
           price: '5000сом'
@@ -591,7 +589,7 @@ class App extends React.Component {
         {
           id: 73,
           title: 'Термотрансферный принтер Xprinter XP-237B  ',
-          img: '237b.jpg',
+          img: '',
           desc: 'Xprinter XP-237B',
           category: 'printer',
           price: '3300сом'
@@ -599,7 +597,7 @@ class App extends React.Component {
         {
           id: 74,
           title: 'Термотрансферный принтер Xprinter подставка-держатель для больших рулонов этикеток ',
-          img: '872e.jpeg',
+          img: '',
           desc: 'Xprinter подставка-держатель для больших рулонов этикеток',
           category: 'printer',
           price: '950сом'
@@ -607,7 +605,7 @@ class App extends React.Component {
         {
           id: 75,
           title: ' Звонок для принтера Кухонный звонок Xprinter X1',
-          img: '1afd.jpeg',
+          img: '',
           desc: 'Кухонный звонок Xprinter X1',
           category: 'printer',
           price: '1300сом'
@@ -616,7 +614,7 @@ class App extends React.Component {
         {
           id: 76,
           title: ' Кнопка вызова официанта XTC01 1-key черно-красный',
-          img: 'orig.webp',
+          img: '',
           desc: ' XTC01 1-key черно-красный',
           category: 'knopca',
           price: '420сом'
@@ -624,7 +622,7 @@ class App extends React.Component {
         {
           id: 77,
           title: ' Кнопка вызова официанта CBC04 4-key черный',
-          img: 'RTKB22117.jpg',
+          img: '',
           desc: '  CBC04 4-key черный',
           category: 'knopca',
           price: '470сом'
@@ -632,7 +630,7 @@ class App extends React.Component {
         {
           id: 78,
           title: ' Кнопка вызова официанта XTC03 3-key черно-красный ',
-          img: 'orig.webp',
+          img: '',
           desc: '  XTC03 3-key черно-красный ',
           category: 'knopca',
           price: '450сом'
@@ -640,7 +638,7 @@ class App extends React.Component {
         {
           id: 79,
           title: ' Кнопка вызова официанта со стойкой XWP01 4-key белый  ',
-          img: 'Singcall.webp',
+          img: '',
           desc: ' XWP01 4-key белый  ',
           category: 'knopca',
           price: '900сом'
@@ -648,7 +646,7 @@ class App extends React.Component {
         {
           id: 80,
           title: ' Кнопка вызова официанта XFCR03 3-key бело-красный  ',
-          img: 'large_.jpg',
+          img: '',
           desc: '  XFCR03 3-key бело-красный  ',
           category: 'knopca',
           price: '450сом'
@@ -656,7 +654,7 @@ class App extends React.Component {
         {
           id: 81,
           title: ' Кнопка вызова официанта XFC03 3-key бело-черный  ',
-          img: 'Hb.webp',
+          img: '',
           desc: '  XFC03 3-key бело-черный   ',
           category: 'knopca',
           price: '450сом'
@@ -664,7 +662,7 @@ class App extends React.Component {
         {
           id: 82,
           title: ' Кнопка вызова официанта CBFR01 1-key бело-красный  ',
-          img: 'large_.jpg',
+          img: '',
           desc: ' CBFR01 1-key бело-красный  ',
           category: 'knopca',
           price: '420сом'
@@ -672,23 +670,15 @@ class App extends React.Component {
         {
           id: 83,
           title: 'Кнопка вызова официанта CBFB01 1-key черно-белый  ',
-          img: 'Hb.webp',
+          img: '',
           desc: ' CBFB01 1-key черно-белый   ',
           category: 'knopca',
           price: '420сом'
         },
         {
-          id: 84,
-          title: 'Табло вызова официанта XM01 21*14*3.5см  ',
-          img: 'tablo.webp',
-          desc: ' XM01 21*14*3.5см   ',
-          category: 'knopca',
-          price: '3800сом'
-        },
-        {
           id: 85,
           title: 'Сенсорные часы официанта, персонала (черные) - CAT01 ',
-          img: 'chas.jpeg',
+          img: '2.jpeg',
           desc: ' CAT01 ',
           category: 'knopca',
           price: '3900сом'
@@ -696,18 +686,10 @@ class App extends React.Component {
         {
           id: 86,
           title: 'Подставка для меню и кнопки вызова MC01 черная  ',
-          img: '697be.jpeg',
+          img: '1.jpeg',
           desc: 'MC01 черная ',
           category: 'knopca',
           price: '270сом'
-        },
-        {
-          id: 87,
-          title: 'Усилитель сигнала для табло официантов-SE001 ',
-          img: 'usiliteli.jpeg',
-          desc: 'SE001',
-          category: 'knopca',
-          price: '2500сом'
         },
         {
           id: 88,
@@ -908,26 +890,43 @@ class App extends React.Component {
           desc: 'Ш41см*Д42см*В10см, 6-заж. для купюр, 3-ячеек для монет, RJ11 интерфейс, БЕЛЫЙ ',
           category: 'drawers',
           price: '4200сом'
-        },  
-      ],
+        },  
+      ],
+
+      currentItems: [],
       showFullItem: false,
-      fullItem: {}
+      fullItem: {},
     };
 
-    this.state.currentItems = this.state.items;
     this.addToOrder = this.addToOrder.bind(this);
     this.deleteOrder = this.deleteOrder.bind(this);
     this.choseCategory = this.choseCategory.bind(this);
     this.onShowItem = this.onShowItem.bind(this);
+    this.saveData = this.saveData.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('beforeunload', this.saveData);
+
+
+    const firstTenItems = this.state.items.slice(0, 9);
+    this.setState({ currentItems: firstTenItems });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload', this.saveData);
+    this.saveData();
+  }
+
+  saveData() {
+    localStorage.setItem('orders', JSON.stringify(this.state.orders));
   }
 
   render() {
     return (
       <div className="Shops">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} />
-        <Categories choseCategory={this.choseCategory} />
+        <Header orders={this.state.orders} onDelete={this.deleteOrder} choseCategory={this.choseCategory} />
         <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
-
         {this.state.showFullItem && <ShowFullItem onAdd={this.addToOrder} onShowItem={this.onShowItem} item={this.state.fullItem} />}
         <Footer />
       </div>
@@ -935,17 +934,17 @@ class App extends React.Component {
   }
 
   onShowItem(item) {
-    this.setState({fullItem: item})
-    this.setState({ showFullItem:!this.state.showFullItem });
+    this.setState({ fullItem: item });
+    this.setState({ showFullItem: !this.state.showFullItem });
   }
-
 
   choseCategory(category) {
     if (category === 'all') {
       this.setState({ currentItems: this.state.items });
       return;
     }
-    this.setState({ currentItems: this.state.items.filter(el => el.category === category) });
+    const filteredItems = this.state.items.filter(el => el.category === category);
+    this.setState({ currentItems: filteredItems });
   }
 
   addToOrder(item) {

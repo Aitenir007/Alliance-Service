@@ -8,8 +8,8 @@
 
 
 body{
-  background:#dc9a00b5 ;
-  color: black;
+  background:black ;
+  color: yellow;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
 }
@@ -62,6 +62,94 @@ transform: scale(1.5);
 
 }
 
+
+.order-now {
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px;
+  list-style: none;
+  color: #1d1d1e;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+}
+.order-now:hover{
+  color: #5e5e5e;
+  
+}
+
+.order-form {
+  position: fixed;
+  color: #1d1d1e;
+  top: 25%;
+  width: 100%;
+  max-width: 400px;
+  right: 35.5%;
+  border-radius: 10px;
+  background-color: #cccccc;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.order-form h2 {
+  margin-top: 0;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form label {
+  margin-bottom: 10px;
+}
+
+.order-form input,
+.order-form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.order-form select:focus,
+.order-form select:active {
+  border-color: #ccc; 
+  outline: none; 
+  padding: 5px;
+}
+
+.order-form button[type="submit"] {
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.order-form button[type="button"] {
+  padding: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.order-form button[type="button"]:hover {
+  background-color: #c82333;
+}
+
 .presentation {
   margin: 50px 0;
   width: 100%;
@@ -72,9 +160,80 @@ transform: scale(1.5);
   background-position: center center;
   background-blend-mode: multiply;
   background-color: aliceblue;
-  transition: background-image 1s ease-out; 
+  transition: transform 0.5s ease; 
 }
 
+
+.presentation .img {
+  width: 50%;
+  line-height: 0;
+}
+
+.sidebar {
+  position: fixed;
+  color: #1d1d1e;
+  top: 0;
+  right: -500px;
+  width: 300px;
+  height: 100%;
+  background: #5b5b5b;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.kat{
+  list-style: none; 
+  color: #1d1d1e;
+  cursor: pointer;
+  
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+  width: 50px;
+  padding: 3px;
+}
+
+.kat:hover{
+  color: #ff0015;
+  background: yellow;
+  transform: scale(1.1);
+}
+
+.prev, .next {
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.prev {
+  left: 10px;
+  width: 45%;
+  height: 95%;
+}
+
+.next {
+  right: 10px;
+  width: 45%;
+  height: 95%;
+}
 
 
 
@@ -113,10 +272,14 @@ header .shop-cart{
   box-shadow: 4px 5px 15px -7px #606060;
   z-index: 1000;
   border-radius: 15px;
-  
-
   padding: 20px;
   padding-bottom: 0;
+}
+
+.lifo{
+  list-style: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 header .shop-cart .item{
@@ -141,6 +304,7 @@ header .shop-cart .item b{
 }
 header .shop-cart{
   font-size: 20px;
+  color:#1d1d1e;
   margin-bottom: 20px;
 }
 
@@ -167,9 +331,9 @@ header .shop-cart .summa{
 }
 
 .categories div{
-  display: inline;
-  background:#fff;
-  border-radius: 50px;
+  background: #8d8d8d;
+  color: #1d1d1e;
+  border-radius: 5px;
   padding: 10px 10px;
   margin-bottom: 25px;
   margin-right: 15px;
@@ -193,15 +357,15 @@ header .shop-cart .summa{
 
 .icon-container img:hover {
   transform: scale(1.1); 
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
 
 }
 
 
 .categories div:hover{
-  border-color: silver;
-  transform: scale(1.5);
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  transform: scale(1.1);
+  background: yellow;
+  box-shadow: 0px 0px 50px rgba(254, 254, 254, 0.945);
 }
 
 
@@ -216,7 +380,7 @@ main{
  main .item{
   width: 30%;
   margin-bottom: 50px;
-  background: #fff;
+  background: #8d8d8d;
   overflow: hidden;
   position: relative;
   padding-bottom: 50px;
