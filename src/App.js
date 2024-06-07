@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       orders: JSON.parse(localStorage.getItem('orders')) || [],
+      currentItems: [],
       items: [
         {
           id: 1,
@@ -16,7 +17,8 @@ class App extends React.Component {
           img: 'princhec.jpeg',
           desc: 'Intel® Core i5-CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, RJ11, 1COM, 1VGA, 15,6"+11,6" LCD touch (1366*768) (1-СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '35.900сом'
+          price: '35.900сом',
+          quantity: 1
         },
         {
           id: 2,
@@ -24,7 +26,8 @@ class App extends React.Component {
           img: 'monoblog.jpeg',
           desc: 'Intel® Core I3-4030 4th CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '23.900сом'
+          price: '23.900сом',
+          quantity: 1
         },
         {
           id: 3,
@@ -32,7 +35,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 128GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '21.900сом'
+          price: '21.900сом',
+          quantity: 1
         },
         {
           id: 4,
@@ -40,7 +44,8 @@ class App extends React.Component {
           img: 'call.webp',
           desc: 'allianceservice',
           category: 'knopca',
-          price: '480сом'
+          price: '480сом',
+          quantity: 1
         },
         {
           id: 5,
@@ -48,7 +53,8 @@ class App extends React.Component {
           img: 'kard.webp',
           desc: 'RFID считыватель для смарт карт IC R20C-USB-8H10D USB',
           category: 'smart card reader',
-          price: '1700с'
+          price: '1700с',
+          quantity: 1
         },
         {
           id: 6,
@@ -56,7 +62,8 @@ class App extends React.Component {
           img: 'nout.png',
           desc: 'Можете рассчитывать на комфорт в использовании. Аппаратная конфигурация основана на производительном процессоре Intel Core i3 и оперативной памяти 8 ГБ. Для максимального комфорта использования, ноутбук оснащен дисплеем NanoEdge с углами обзора 178 градусов и накопителем SSD объемом 512 ГБ.',
           category: 'nout',
-          price: '37.000сом'
+          price: '37.000сом',
+          quantity: 1
         },
         {
           id: 7,
@@ -64,7 +71,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 32GB,DDR3 2GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '18.900сом'
+          price: '18.900сом',
+          quantity: 1
         },
         {
           id: 8,
@@ -72,7 +80,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 32GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '19.500сом'
+          price: '19.500сом',
+          quantity: 1
         },
         {
           id: 9,
@@ -80,7 +89,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '19.900сом'
+          price: '19.900сом',
+          quantity: 1
         },
         {
           id: 10,
@@ -88,7 +98,8 @@ class App extends React.Component {
           img: 'pos-609-w.jpeg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) White',
           category: 'POS-monoblog',
-          price: '19.900сом'
+          price: '19.900сом',
+          quantity: 1
         },
         {
           id: 11,
@@ -96,7 +107,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '20.900сом'
+          price: '20.900сом',
+          quantity: 1
         },
         {
           id: 12,
@@ -104,7 +116,8 @@ class App extends React.Component {
           img: 'chek.png',
           desc: ' Мини-ручной сканер штрих-кода с дисплеем Беспроводной портативный сканер штрих-кода',
           category: 'scaner',
-          price: '8600сом'
+          price: '8600сом',
+          quantity: 1
         },
         {
           id: 13,
@@ -112,7 +125,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 32GB,DDR3 2GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '18.900сом'
+          price: '18.900сом',
+          quantity: 1
         },
         {
           id: 14,
@@ -120,7 +134,8 @@ class App extends React.Component {
           img: 'goldwhite.jpeg',
           desc: 'Intel N2840 (up to 2.6 GHz) SSD 32GB,DDR3 2GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) white gold',
           category: 'POS-monoblog',
-          price: '18.900сом'
+          price: '18.900сом',
+          quantity: 1
         },
         {
           id: 15,
@@ -128,7 +143,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: 'Intel N2840 (up to 2.6 GHz) SSD 32GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '19.500сом'
+          price: '19.500сом',
+          quantity: 1
         },
         {
           id: 16,
@@ -136,7 +152,8 @@ class App extends React.Component {
           img: 'goldwhite.jpeg',
           desc: 'Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) white gold',
           category: 'POS-monoblog',
-          price: '19.900сом'
+          price: '19.900сом',
+          quantity: 1
         },
         {
           id: 17,
@@ -144,7 +161,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '19.900сом'
+          price: '19.900сом',
+          quantity: 1
         },
         {
           id: 18,
@@ -152,7 +170,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 8GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '20.400сом'
+          price: '20.400сом',
+          quantity: 1
         },
         {
           id: 19,
@@ -160,7 +179,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: ' Intel i3, SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) Black',
           category: 'POS-monoblog',
-          price: '20.900сом'
+          price: '20.900сом',
+          quantity: 1
         },
         {
           id: 20,
@@ -168,7 +188,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: '  ntel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 8GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '20.900сом'
+          price: '20.900сом',
+          quantity: 1
         },
         {
           id: 21,
@@ -176,7 +197,8 @@ class App extends React.Component {
           img: 'rs-607.jpeg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 128GB,DDR3 8GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black silver',
           category: 'POS-monoblog',
-          price: '21.900сом'
+          price: '21.900сом',
+          quantity: 1
         },
         {
           id: 22,
@@ -184,7 +206,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '20.500сом'
+          price: '20.500сом',
+          quantity: 1
         },
         {
           id: 23,
@@ -192,7 +215,8 @@ class App extends React.Component {
           img: 'pos-609-w.jpeg',
           desc: 'Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) White',
           category: 'POS-monoblog',
-          price: '20.500сом'
+          price: '20.500сом',
+          quantity: 1
         },
         {
           id: 24,
@@ -200,7 +224,8 @@ class App extends React.Component {
           img: 'PS610.jpg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '20.500сом'
+          price: '20.500сом',
+          quantity: 1
         },
         {
           id: 25,
@@ -208,7 +233,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: '  Intel N2840 (up to 2.6 GHz) SSD 64GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '21.500сом'
+          price: '21.500сом',
+          quantity: 1
         },
         {
           id: 26,
@@ -216,7 +242,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: ' Intel N2840 (up to 2.6 GHz) SSD 128GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '22.500сом'
+          price: '22.500сом',
+          quantity: 1
         },
         {
           id: 27,
@@ -224,7 +251,8 @@ class App extends React.Component {
           img: 'princhec.jpeg',
           desc: ' Intel® Core i5-CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, RJ11, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '33.500сом'
+          price: '33.500сом',
+          quantity: 1
         },
         {
           id: 28,
@@ -232,7 +260,8 @@ class App extends React.Component {
           img: '4867.970.jpg',
           desc: 'Ш41см*Д42см*В10см, 6-заж. для купюр, 3-ячеек для монет, RJ11 интерфейс, БЕЛЫЙ ',
           category: 'drawers',
-          price: '4200сом'
+          price: '4200сом',
+          quantity: 1
         },
         {
           id: 29,
@@ -240,7 +269,8 @@ class App extends React.Component {
           img: 'monoblog.jpeg',
           desc: ' Intel N2840 CPU, SSD 64GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '19.900сом'
+          price: '19.900сом',
+          quantity: 1
         },
         {
           id: 30,
@@ -248,7 +278,8 @@ class App extends React.Component {
           img: 'monoblog.jpeg',
           desc: 'Intel N2840 CPU, SSD 128GB,DDR3 4GB, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '20.900сом'
+          price: '20.900сом',
+          quantity: 1
         },
         {
           id: 31,
@@ -256,7 +287,8 @@ class App extends React.Component {
           img: 'monoblog.jpeg',
           desc: 'Intel® Core i5-CPU SSD 128GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '29.700сом'
+          price: '29.700сом',
+          quantity: 1
         },
         {
           id: 32,
@@ -264,7 +296,8 @@ class App extends React.Component {
           img: 'monoblog.jpeg',
           desc: ' Intel® Core i3 CPU SSD 128GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '22.900сом'
+          price: '22.900сом',
+          quantity: 1
         },
         {
           id: 33,
@@ -272,7 +305,8 @@ class App extends React.Component {
           img: 'gas.webp',
           desc: '  Intel® Core i5-CPU SSD 128GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '29.700сом'
+          price: '29.700сом',
+          quantity: 1
         },
         {
           id: 34,
@@ -280,7 +314,8 @@ class App extends React.Component {
           img: 'twoface.jpg',
           desc: 'Intel N2840 (up to 2.58 GHz) SSD 64GB,DDR3 4GB,6USB,1COM,1VGA,15,6"+13,3" LCD touch (1366*768) (1-СЕНСОРНЫЙ ЭКРАН) Black',
           category: 'POS-monoblog',
-          price: '27.000сом'
+          price: '27.000сом',
+          quantity: 1
         },
         {
           id: 35,
@@ -288,7 +323,8 @@ class App extends React.Component {
           img: 'twoface.jpg',
           desc: 'Intel N2840 (up to 2.58 GHz) SSD 64GB,DDR3 4GB,6USB,1COM,1VGA,15"+15" LCD touch (1024*768) (1-СЕНСОРНЫЙ ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '27.500сом'
+          price: '27.500сом',
+          quantity: 1
         },
         {
           id: 36,
@@ -296,7 +332,8 @@ class App extends React.Component {
           img: 'twoface.jpg',
           desc: 'Intel N2840 (up to 2.58 GHz) SSD 64GB,DDR3 4GB,6USB,1COM,1VGA,15"+15" LCD touch (1024*768) (1-СЕНСОРНЫЙ ЭКРАН) White',
           category: 'POS-monoblog',
-          price: '27.500сом'
+          price: '27.500сом',
+          quantity: 1
         },
         {
           id: 37,
@@ -304,7 +341,8 @@ class App extends React.Component {
           img: 'twoface.jpg',
           desc: 'Intel J1800 (up to 2.58 GHz) SSD 64GB,DDR3 4GB,6USB,1COM,1VGA,15"+15" LCD touch (1024*768) (2-СЕНСОРНЫХ ЭКРАНА) black',
           category: 'POS-monoblog',
-          price: '27.500сом'
+          price: '27.500сом',
+          quantity: 1
         },
         {
           id: 38,
@@ -312,7 +350,8 @@ class App extends React.Component {
           img: 'pos-609.jpg',
           desc: '15" LCD touch (1024*768) (СЕНСОРНЫй ЭКРАН) black',
           category: 'POS-monoblog',
-          price: '11.700сом'
+          price: '11.700сом',
+          quantity: 1
         },
         {
           id: 39,
@@ -320,7 +359,8 @@ class App extends React.Component {
           img: 'pos-58d-58mm-desktop.jpg',
           desc: 'POS 58D 58mm Desktop ',
           category: 'printer',
-          price: '2100сом'
+          price: '2100сом',
+          quantity: 1
         },
         {
           id: 40,
@@ -328,7 +368,8 @@ class App extends React.Component {
           img: 'images.webp',
           desc: 'MP-58M ',
           category: 'printer',
-          price: '2800сом'
+          price: '2800сом',
+          quantity: 1
         },
         {
           id: 41,
@@ -336,7 +377,8 @@ class App extends React.Component {
           img: '58mini.jpeg',
           desc: 'MP-58MINI ',
           category: 'printer',
-          price: '2500сом'
+          price: '2500сом',
+          quantity: 1
         },
 
         {
@@ -345,7 +387,8 @@ class App extends React.Component {
           img: 'xp_p300-4.webp',
           desc: 'Xprinter 58mm XP-P300 - USB+Bluetooth',
           category: 'printer',
-          price: '4000сом'
+          price: '4000сом',
+          quantity: 1
         },
         {
           id: 43,
@@ -353,7 +396,8 @@ class App extends React.Component {
           img: '8fb89774a09560425e4a2bb734.jpeg',
           desc: 'адаптер со встроеным принтером.',
           category: 'printer',
-          price: '6850сом'
+          price: '6850сом',
+          quantity: 1
         },
         {
           id: 44,
@@ -361,7 +405,8 @@ class App extends React.Component {
           img: '0e4a69bfec0c99bf90fe7ccf66.jpeg',
           desc: 'Xprinter F260L',
           category: 'printer',
-          price: '6000сом'
+          price: '6000сом',
+          quantity: 1
         },
         {
           id: 45,
@@ -369,7 +414,8 @@ class App extends React.Component {
           img: 'printer-chekov-xprinter-xp-q260iii-80-mm-usb-lan-com.jpg',
           desc: 'Xprinter Q260III',
           category: 'printer',
-          price: '7900сом'
+          price: '7900сом',
+          quantity: 1
         },
         {
           id: 46,
@@ -377,7 +423,8 @@ class App extends React.Component {
           img: 'rongta_rp328u.webp',
           desc: 'Rongta RP328',
           category: 'printer',
-          price: '7500сом'
+          price: '7500сом',
+          quantity: 1
         },
         {
           id: 47,
@@ -385,7 +432,8 @@ class App extends React.Component {
           img: 'printer-chekov-xprinter-xp-n160ii-80-mm-usb.jpg',
           desc: 'Rongta RP335  ',
           category: 'printer',
-          price: '6000сом'
+          price: '6000сом',
+          quantity: 1
         },
         {
           id: 48,
@@ -393,7 +441,8 @@ class App extends React.Component {
           img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+Bluetooth ',
           category: 'printer',
-          price: '6500сом'
+          price: '6500сом',
+          quantity: 1
         },
         {
           id: 49,
@@ -401,7 +450,8 @@ class App extends React.Component {
           img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+WiFi ',
           category: 'printer',
-          price: '6500сом'
+          price: '6500сом',
+          quantity: 1
         },
         {
           id: 50,
@@ -409,7 +459,8 @@ class App extends React.Component {
           img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+LAN ',
           category: 'printer',
-          price: '4800сом'
+          price: '4800сом',
+          quantity: 1
         },
         {
           id: 51,
@@ -417,7 +468,8 @@ class App extends React.Component {
           img: '1f1d5e67fdc385ba0dba0dca95.jpeg',
           desc: 'Xprinter Q80A  80mm 230mm/s,Black-USB+LAN ',
           category: 'printer',
-          price: '4500сом'
+          price: '4500сом',
+          quantity: 1
         },
         {
           id: 52,
@@ -425,7 +477,8 @@ class App extends React.Component {
           img: '1-1200x800.jpg',
           desc: 'Xprinter A160H  ',
           category: 'printer',
-          price: '4200сом'
+          price: '4200сом',
+          quantity: 1
         },
         {
           id: 53,
@@ -433,7 +486,8 @@ class App extends React.Component {
           img: 'XP-Q200-1200x800.jpg',
           desc: 'Xprinter Q200  ',
           category: 'printer',
-          price: '6200сом'
+          price: '6200сом',
+          quantity: 1
         },
         {
           id: 54,
@@ -441,7 +495,8 @@ class App extends React.Component {
           img: '1-1200x800.jpg',
           desc: 'Xprinter A260  ',
           category: 'printer',
-          price: '7100сом'
+          price: '7100сом',
+          quantity: 1
         },
         {
           id: 55,
@@ -449,7 +504,8 @@ class App extends React.Component {
           img: 'printer-chekov-xprinter-xp-n160ii-80-mm-usb.jpg',
           desc: 'Xprinter N160II ',
           category: 'printer',
-          price: '6500сом'
+          price: '6500сом',
+          quantity: 1
         },  
         {
           id: 56,
@@ -457,7 +513,8 @@ class App extends React.Component {
           img: '1-500x400.jpg',
           desc: ' Xprinter XP-480B   ',
           category: 'printer',
-          price: '8000сом'
+          price: '8000сом',
+          quantity: 1
         },
         {
           id: 57,
@@ -465,7 +522,8 @@ class App extends React.Component {
           img: '25b22fb328d0e8861ac903abfd.jpeg',
           desc: ' Xprinter XP-DT325B ',
           category: 'printer',
-          price: '6500сом'
+          price: '6500сом',
+          quantity: 1
         },
         {
           id: 58,
@@ -473,7 +531,8 @@ class App extends React.Component {
           img: 'xprinter-xp-q371.jpg',
           desc: ' Xprinter XP-Q371 ',
           category: 'printer',
-          price: '4700сом'
+          price: '4700сом',
+          quantity: 1
         },
         {
           id: 59,
@@ -481,7 +540,8 @@ class App extends React.Component {
           img: '15659464015634.webp',
           desc: ' Xprinter XP-420B  ',
           category: 'printer',
-          price: '6500сом'
+          price: '6500сом',
+          quantity: 1
         },
         {
           id: 60,
@@ -489,7 +549,8 @@ class App extends React.Component {
           img: 'xprinter-xp-dt425b.jpg',
           desc: ' Xprinter XP-DT425B ',
           category: 'printer',
-          price: '6800сом'
+          price: '6800сом',
+          quantity: 1
         },
         {
           id: 61,
@@ -497,7 +558,8 @@ class App extends React.Component {
           img: 'bnt.jpeg',
           desc: 'Xprinter XP-303B ',
           category: 'printer',
-          price: '5000сом'
+          price: '5000сом',
+          quantity: 1
         },
         {
           id: 62,
@@ -505,7 +567,8 @@ class App extends React.Component {
           img: 'ghj.webp',
           desc: 'Xprinter 60mm XP-P210 ',
           category: 'printer',
-          price: '5000сом'
+          price: '5000сом',
+          quantity: 1
         },
         {
           id: 63,
@@ -513,7 +576,8 @@ class App extends React.Component {
           img: 'rty.jpg',
           desc: 'Xprinter XP-237B',
           category: 'printer',
-          price: '3300сом'
+          price: '3300сом',
+          quantity: 1
         },
         {
           id: 64,
@@ -521,7 +585,8 @@ class App extends React.Component {
           img: 'ger.jpg',
           desc: 'Xprinter подставка-держатель для больших рулонов этикеток',
           category: 'printer',
-          price: '950сом'
+          price: '950сом',
+          quantity: 1
         },
         {
           id: 67,
@@ -529,7 +594,8 @@ class App extends React.Component {
           img: 'stoik.jpeg',
           desc: ' XWP01 4-key белый  ',
           category: 'knopca',
-          price: '900сом'
+          price: '900сом',
+          quantity: 1
         },
         {
           id: 68,
@@ -537,7 +603,8 @@ class App extends React.Component {
           img: '121.jpg',
           desc: '  XFCR03 3-key бело-красный  ',
           category: 'knopca',
-          price: '450сом'
+          price: '450сом',
+          quantity: 1
         },
 
         {
@@ -546,7 +613,8 @@ class App extends React.Component {
           img: '12.jpg',
           desc: ' CBFR01 1-key бело-красный  ',
           category: 'knopca',
-          price: '420сом'
+          price: '420сом',
+          quantity: 1
         },
         {
           id: 70,
@@ -554,7 +622,8 @@ class App extends React.Component {
           img: '21.jpg',
           desc: ' CBFB01 1-key черно-белый   ',
           category: 'knopca',
-          price: '420сом'
+          price: '420сом',
+          quantity: 1
         },
         {
           id: 71,
@@ -562,7 +631,8 @@ class App extends React.Component {
           img: '2.jpeg',
           desc: ' CAT01 ',
           category: 'knopca',
-          price: '3900сом'
+          price: '3900сом',
+          quantity: 1
         },
         {
           id: 72,
@@ -570,7 +640,8 @@ class App extends React.Component {
           img: '1.jpeg',
           desc: 'MC01 черная ',
           category: 'knopca',
-          price: '270сом'
+          price: '270сом',
+          quantity: 1
         },
         {
           id: 73,
@@ -578,7 +649,8 @@ class App extends React.Component {
           img: 'idina.png',
           desc: 'Весы Rongta RLS1100 с печатью этикеток (RS232+LAN)',
           category: 'displei',
-          price: '29.500сом'
+          price: '29.500сом',
+          quantity: 1
         },
         {
           id: 74,
@@ -586,7 +658,8 @@ class App extends React.Component {
           img: '568.jpeg',
           desc: ' GS-LED8N USB ',
           category: 'displei',
-          price: '4600сом'
+          price: '4600сом',
+          quantity: 1
         },
         {
           id: 75,
@@ -594,7 +667,8 @@ class App extends React.Component {
           img: 'scar.jpg',
           desc: '  ZEBRA DS2208-SR  ',
           category: 'scaner',
-          price: '6400сом'
+          price: '6400сом',
+          quantity: 1
         },
         {
           id: 76,
@@ -602,7 +676,8 @@ class App extends React.Component {
           img: 's.jpg',
           desc: ' GOOSENECK INTELLISTAND - DS2208 BLACK ',
           category: 'scaner',
-          price: '950сом'
+          price: '950сом',
+          quantity: 1
         },
         {
           id: 77,
@@ -610,7 +685,8 @@ class App extends React.Component {
           img: '231.jpg',
           desc: '  Winson WNI-6710 USB ',
           category: 'scaner',
-          price: '3000сом'
+          price: '3000сом',
+          quantity: 1
         },
         {
           id: 78,
@@ -618,7 +694,8 @@ class App extends React.Component {
           img: '321.jpg',
           desc: '  Winson WAI-6780 USB ',
           category: 'scaner',
-          price: '8500сом'
+          price: '8500сом',
+          quantity: 1
         },
         {
           id: 79,
@@ -626,7 +703,8 @@ class App extends React.Component {
           img: '321.jpg',
           desc: '  Winson WAI-7000 USB ',
           category: 'scaner',
-          price: '11.700сом'
+          price: '11.700сом',
+          quantity: 1
         },
         {
           id: 80,
@@ -634,7 +712,8 @@ class App extends React.Component {
           img: '1234.jpg',
           desc: ' Winson WAI-6510 USB ',
           category: 'scaner',
-          price: '9100сом'
+          price: '9100сом',
+          quantity: 1
         },
         {
           id: 81,
@@ -642,7 +721,8 @@ class App extends React.Component {
           img: '67.jpg',
           desc: '  Winson WNI-6712/V USB  ',
           category: 'scaner',
-          price: '5500сом'
+          price: '5500сом',
+          quantity: 1
         },
         {
           id: 82,
@@ -650,7 +730,8 @@ class App extends React.Component {
           img: '23.jpeg',
           desc: ' Winson CMI-8010 USB  ',
           category: 'scaner',
-          price: '2250сом'
+          price: '2250сом',
+          quantity: 1
         },
         {
           id: 83,
@@ -658,7 +739,8 @@ class App extends React.Component {
           img: '34.jpg',
           desc: 'Winson WAI-5770 ',
           category: 'scaner',
-          price: '8500сом'
+          price: '8500сом',
+          quantity: 1
         },
         {
           id: 84,
@@ -666,7 +748,8 @@ class App extends React.Component {
           img: '123.jpg',
           desc: 'WNI-6383B/V USB  ',
           category: 'scaner',
-          price: '7500сом'
+          price: '7500сом',
+          quantity: 1
         },
         {
           id: 85,
@@ -674,7 +757,8 @@ class App extends React.Component {
           img: '1213.jpeg',
           desc: 'Winson CMC-1871U ',
           category: 'scaner',
-          price: '1800сом'
+          price: '1800сом',
+          quantity: 1
         },
         {
           id: 86,
@@ -682,7 +766,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: ' Winson WNI-6380g USB ',
           category: 'scaner',
-          price: '3700сом'
+          price: '3700сом',
+          quantity: 1
         },
         {
           id: 87,
@@ -690,7 +775,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: ' Winson WNI-6213B USB ',
           category: 'scaner',
-          price: '9200сом'
+          price: '9200сом',
+          quantity: 1
         },
         {
           id: 88,
@@ -698,7 +784,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: ' Winson CMI-8012B/Z USB ',
           category: 'scaner',
-          price: '5300сом'
+          price: '5300сом',
+          quantity: 1
         },
         {
           id: 89,
@@ -706,7 +793,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: ' Winson Z13P-510  ',
           category: 'scaner',
-          price: '2700сом'
+          price: '2700сом',
+          quantity: 1
         },
         {
           id: 90,
@@ -714,7 +802,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: ' Winson WNI-S014P USB 3в1 ',
           category: 'scaner',
-          price: '3450сом'
+          price: '3450сом',
+          quantity: 1
         },
         {
           id: 91,
@@ -722,7 +811,8 @@ class App extends React.Component {
           img: '551.jpg',
           desc: '  WNI-S742BU-USB ',
           category: 'scaner',
-          price: '5800сом'
+          price: '5800сом',
+          quantity: 1
         },
         {
           id: 92,
@@ -730,7 +820,8 @@ class App extends React.Component {
           img: 'chek.png',
           desc: ' Winson WNI-8014P USB',
           category: 'scaner',
-          price: '8000сом'
+          price: '8000сом',
+          quantity: 1
         },
         {
           id: 93,
@@ -738,7 +829,8 @@ class App extends React.Component {
           img: '76.jpeg',
           desc: 'Ш20см*Д30см*В10см, 4-лот. для купюр, 6-ячеек для монет, RJ11 интерфейс (режим авто-открывания) Черный',
           category: 'drawers',
-          price: '3000сом'
+          price: '3000сом',
+          quantity: 1
         },
         {
           id: 94,
@@ -746,7 +838,8 @@ class App extends React.Component {
           img: 'cash-pg.jpg',
           desc: 'Ш46см*Д17см*В10см, 2 бокса с замками, 6-лот. для купюр, 8-ячеек для монет, RJ11 интерфейс, Voltage:12V 24V, Черный',
           category: 'drawers',
-          price: '4900сом'
+          price: '4900сом',
+          quantity: 1
         },
         {
           id: 95,
@@ -754,7 +847,8 @@ class App extends React.Component {
           img: '34343.webp',
           desc: ' Ш41см*Д42см*В10см, 7-заж. для купюр, 4-ячеек для монет, RJ11 интерфейс, Черный ',
           category: 'drawers',
-          price: '4500сом'
+          price: '4500сом',
+          quantity: 1
         },
         {
           id: 96,
@@ -762,11 +856,11 @@ class App extends React.Component {
           img: '34343.webp',
           desc: ' Ш33см*Д36см*В9см, 4-заж. для купюр, 4-ячеек для монет, RJ11 интерфейс, Черный  ',
           category: 'drawers',
-          price: '3500сом'
-        },
-      ],
+          price: '3500сом',
+          quantity: 1
+        },
+      ],
 
-      currentItems: [],
       showFullItem: false,
       fullItem: {},
     };
@@ -776,11 +870,11 @@ class App extends React.Component {
     this.choseCategory = this.choseCategory.bind(this);
     this.onShowItem = this.onShowItem.bind(this);
     this.saveData = this.saveData.bind(this);
+    this.handleQuantityChange = this.handleQuantityChange.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('beforeunload', this.saveData);
-
 
     const firstTenItems = this.state.items.slice(0, 9);
     this.setState({ currentItems: firstTenItems });
@@ -795,12 +889,35 @@ class App extends React.Component {
     localStorage.setItem('orders', JSON.stringify(this.state.orders));
   }
 
+  handleQuantityChange(itemId, newQuantity) {
+    this.setState({
+      orders: this.state.orders.map(order =>
+        order.id === itemId ? { ...order, quantity: newQuantity } : order
+      )
+    });
+  }
+
   render() {
     return (
       <div className="Shops">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} choseCategory={this.choseCategory} />
-        <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
-        {this.state.showFullItem && <ShowFullItem onAdd={this.addToOrder} onShowItem={this.onShowItem} item={this.state.fullItem} />}
+        <Header
+          orders={this.state.orders}
+          onDelete={this.deleteOrder}
+          onQuantityChange={this.handleQuantityChange}
+          choseCategory={this.choseCategory}
+        />
+        <Items
+          onShowItem={this.onShowItem}
+          items={this.state.currentItems}
+          onAdd={this.addToOrder}
+        />
+        {this.state.showFullItem && (
+          <ShowFullItem
+            onAdd={this.addToOrder}
+            onShowItem={this.onShowItem}
+            item={this.state.fullItem}
+          />
+        )}
         <Footer />
       </div>
     );
@@ -808,7 +925,7 @@ class App extends React.Component {
 
   onShowItem(item) {
     this.setState({ fullItem: item });
-    this.setState( onclick={ showFullItem: !this.state.showFullItem });
+    this.setState({ showFullItem: !this.state.showFullItem });
   }
 
   choseCategory(category) {
@@ -828,7 +945,7 @@ class App extends React.Component {
       }
     });
     if (!isInArray) {
-      this.setState({ orders: [...this.state.orders, item] });
+      this.setState({ orders: [...this.state.orders, { ...item, quantity: 1 }] });
     }
   }
 

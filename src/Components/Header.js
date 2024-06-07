@@ -5,14 +5,19 @@ import Categories from './Categories';
 
 const showOrders = (props) => {
   let summa = 0;
-  props.orders.forEach(el => summa += Number.parseFloat(el.price));
+  props.orders.forEach(el => summa += Number.parseFloat(el.price) * el.quantity);
   return (
     <div>
       {props.orders.map(el => (
-        <Order onDelete={props.onDelete} key={el.id} item={el} />
+        <Order
+          onDelete={props.onDelete}
+          key={el.id}
+          item={el}
+          onQuantityChange={props.onQuantityChange}
+        />
       ))}
-      <p className='summa'>Сумма: {new Intl.NumberFormat().format(summa)}с</p>
-      <li className='order-now' onClick={props.onOrderNowClick} >Оформить заказ</li>
+     <p className='summa'>Сумма: {summa.toLocaleString('ru-RU', { minimumFractionDigits: 3 })}сом</p>
+      <li className='order-now' onClick={props.onOrderNowClick}>Оформить заказ</li>
     </div>
   );
 };
@@ -36,16 +41,13 @@ export default function Header(props) {
   const [cartOpen, setCartOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [orderFormOpen, setOrderFormOpen] = useState(false);
-  const [currentContentIndex, setCurrentContentIndex] = useState(0); 
+  const [currentContentIndex, setCurrentContentIndex] = useState(0);
   const [presentationImages] = useState([
-    { image: '/img/png2.jpg', text1: 'Все самое интересное', text2: 'У нас на сайте' },
-    { image: '/img/png3.jpg', text1: 'Все для ', text2: 'кассы' },
-    { image: '/img/png4.jpg', text1: 'Неисправна техника?', text2: 'Приходите к нам!'},
-    { image: '/img/png5.jpg', text1:'',text2:''},
-    { image: '/img/png6.jpg', text1:'',text2:''},
-    { image: '/img/png7.jpg', text1:'',text2:''},
-    { image: '/img/png8.jpg', text1:'',text2:''},
-    { image: '/img/png8.jpg', text1:'',text2:''}
+    { image: '/img/png5.jpg', text1: 'Все самое интересное', text2: 'У нас на сайте' },
+    { image: '/img/png8.jpg', text1: 'Все для ', text2: 'кассы' },
+    { image: '/img/png7.jpg', text1: 'Неисправна техника?', text2: 'Приходите к нам!' },
+    { image: '/img/png6.jpg', text1: '', text2: '' },
+    { image: '/img/png8.jpg', text1: '', text2: '' }
   ]);
 
   const [orderDetails, setOrderDetails] = useState({
@@ -88,16 +90,21 @@ export default function Header(props) {
 
   const handleOrderSubmit = (e) => {
     e.preventDefault();
-  
+
+    let summa = 0;
+    props.orders.forEach(el => summa += Number.parseFloat(el.price) * el.quantity);
+
     let message = `Имя: ${orderDetails.name}\nАдрес: ${orderDetails.address}\nТелефон: ${orderDetails.phone}\nСпособ доставки: ${orderDetails.deliveryMethod}\n\nТовары:\n`;
-    
+
     props.orders.forEach(item => {
-      message += `${item.title} - ${item.price}с\n`;
+      message += `${item.title} - ${item.price} (x${item.quantity})\n`;
     });
-  
+
+    message += `\nСумма: ${new Intl.NumberFormat().format(summa)}с`;
+
     const phoneNumber = '996223301206'; // номер
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  
+
     window.open(url, '_blank');
   };
 
