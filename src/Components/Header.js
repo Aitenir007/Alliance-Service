@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { LuShoppingBag } from "react-icons/lu";
 import Order from './Order';
 import Categories from './Categories';
@@ -40,15 +40,22 @@ export default function Header(props) {
   const [presentationImages] = useState([
     { image: '/img/png2.jpg', text1: 'Все самое интересное', text2: 'У нас на сайте' },
     { image: '/img/png3.jpg', text1: 'Все для ', text2: 'кассы' },
-    { image: '/img/png4.jpg', text1: 'Неисправна техника?', text2: 'Приходите к нам!' }
+    { image: '/img/png4.jpg', text1: 'Неисправна техника?', text2: 'Приходите к нам!'},
+    { image: '/img/png5.jpg', text1:'',text2:''},
+    { image: '/img/png6.jpg', text1:'',text2:''},
+    { image: '/img/png7.jpg', text1:'',text2:''},
+    { image: '/img/png8.jpg', text1:'',text2:''},
+    { image: '/img/png8.jpg', text1:'',text2:''}
   ]);
 
   const [orderDetails, setOrderDetails] = useState({
     name: '',
     address: '',
     phone: '',
-    deliveryMethod: 'courier'
+    deliveryMethod: 'Курьер'
   });
+
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -88,11 +95,32 @@ export default function Header(props) {
       message += `${item.title} - ${item.price}с\n`;
     });
   
-    const phoneNumber = '996';//номер
+    const phoneNumber = '996223301206'; // номер
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
     window.open(url, '_blank');
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setSidebarOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setSidebarOpen(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <header>
       <div>
@@ -111,7 +139,7 @@ export default function Header(props) {
           </div>
         )}
 
-        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <div ref={sidebarRef} className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
           <h2>Каталог</h2>
           <Categories choseCategory={props.choseCategory} />
           <li className='kat' onClick={() => setSidebarOpen(false)}>Закрыть</li>

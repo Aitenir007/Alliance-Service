@@ -12,11 +12,11 @@ class App extends React.Component {
       items: [
         {
           id: 1,
-          title: 'Умар',
-          img: 'umar.jpg',
-          desc: 'allianceservice',
-          category: 'man',
-          price: '500м от вас'
+          title: 'POS-Моноблок GS-3061 2-ЭКРАНА + Принтер чеков 80мм  ',
+          img: 'princhec.jpeg',
+          desc: 'Intel® Core i5-CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, RJ11, 1COM, 1VGA, 15,6"+11,6" LCD touch (1366*768) (1-СЕНСОРНЫЙ ЭКРАН) black',
+          category: 'POS-monoblog',
+          price: '35.900сом'
         },
         {
           id: 2,
@@ -28,11 +28,11 @@ class App extends React.Component {
         },
         {
           id: 3,
-          title: 'Winson WNI-8014P ',
-          img: 'chek.png',
-          desc: ' Мини-ручной сканер штрих-кода с дисплеем Беспроводной портативный сканер штрих-кода',
-          category: 'scaner',
-          price: '8600сом'
+          title: 'POS-Моноблок RS-609',
+          img: 'pos-609.jpg',
+          desc: ' Intel N2840 (up to 2.6 GHz) SSD 128GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
+          category: 'POS-monoblog',
+          price: '21.900сом'
         },
         {
           id: 4,
@@ -100,11 +100,11 @@ class App extends React.Component {
         },
         {
           id: 12,
-          title: 'POS-Моноблок RS-609',
-          img: 'pos-609.jpg',
-          desc: ' Intel N2840 (up to 2.6 GHz) SSD 128GB,DDR3 8GB, 6USB, 1COM, 1VGA, 15" LCD touch (1024*768) (СЕНСОРНЫЙ ЭКРАН) black',
-          category: 'POS-monoblog',
-          price: '21.900сом'
+          title: 'Winson WNI-8014P ',
+          img: 'chek.png',
+          desc: ' Мини-ручной сканер штрих-кода с дисплеем Беспроводной портативный сканер штрих-кода',
+          category: 'scaner',
+          price: '8600сом'
         },
         {
           id: 13,
@@ -157,7 +157,7 @@ class App extends React.Component {
         {
           id: 19,
           title: 'POS-Моноблок ',
-          img: 'someo.webp',
+          img: 'rs-607.jpeg',
           desc: ' Intel i3, SSD 64GB,DDR3 4GB, HDMI, 6USB, 1COM, 1VGA, 15,6" LCD touch (1366*768) (СЕНСОРНЫЙ ЭКРАН) Black',
           category: 'POS-monoblog',
           price: '20.900сом'
@@ -228,11 +228,11 @@ class App extends React.Component {
         },
         {
           id: 28,
-          title: 'POS-Моноблок GS-3061 2-ЭКРАНА + Принтер чеков 80мм  ',
-          img: 'princhec.jpeg',
-          desc: 'Intel® Core i5-CPU SSD 64GB,DDR3 4GB, HDMI, 6USB, RJ11, 1COM, 1VGA, 15,6"+11,6" LCD touch (1366*768) (1-СЕНСОРНЫЙ ЭКРАН) black',
-          category: 'POS-monoblog',
-          price: '35.900сом'
+          title: 'Денежный Ящик at-405w ',
+          img: '4867.970.jpg',
+          desc: 'Ш41см*Д42см*В10см, 6-заж. для купюр, 3-ячеек для монет, RJ11 интерфейс, БЕЛЫЙ ',
+          category: 'drawers',
+          price: '4200сом'
         },
         {
           id: 29,
@@ -338,10 +338,11 @@ class App extends React.Component {
           category: 'printer',
           price: '2500сом'
         },
+
         {
           id: 42,
           title: 'Принтеры чеков  мобильный',
-          img: '',
+          img: 'xp_p300-4.webp',
           desc: 'Xprinter 58mm XP-P300 - USB+Bluetooth',
           category: 'printer',
           price: '4000сом'
@@ -349,7 +350,7 @@ class App extends React.Component {
         {
           id: 43,
           title: 'Принтеры чеков  мобильный POS-Терминал XP-P1 ',
-          img: '',
+          img: '8fb89774a09560425e4a2bb734.jpeg',
           desc: 'адаптер со встроеным принтером.',
           category: 'printer',
           price: '6850сом'
@@ -357,7 +358,7 @@ class App extends React.Component {
         {
           id: 44,
           title: 'Принтеры чеков  Xprinter F260L',
-          img: '',
+          img: '0e4a69bfec0c99bf90fe7ccf66.jpeg',
           desc: 'Xprinter F260L',
           category: 'printer',
           price: '6000сом'
@@ -365,7 +366,7 @@ class App extends React.Component {
         {
           id: 45,
           title: 'Принтеры чеков  Xprinter Q260III',
-          img: '',
+          img: 'printer-chekov-xprinter-xp-q260iii-80-mm-usb-lan-com.jpg',
           desc: 'Xprinter Q260III',
           category: 'printer',
           price: '7900сом'
@@ -373,7 +374,7 @@ class App extends React.Component {
         {
           id: 46,
           title: 'Принтеры чеков Rongta RP328',
-          img: '',
+          img: 'rongta_rp328u.webp',
           desc: 'Rongta RP328',
           category: 'printer',
           price: '7500сом'
@@ -381,7 +382,7 @@ class App extends React.Component {
         {
           id: 47,
           title: 'Принтеры чеков Rongta RP335  ',
-          img: '',
+          img: 'printer-chekov-xprinter-xp-n160ii-80-mm-usb.jpg',
           desc: 'Rongta RP335  ',
           category: 'printer',
           price: '6000сом'
@@ -389,7 +390,7 @@ class App extends React.Component {
         {
           id: 48,
           title: 'Принтеры чеков Xprinter K200L   ',
-          img: '',
+          img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+Bluetooth ',
           category: 'printer',
           price: '6500сом'
@@ -397,7 +398,7 @@ class App extends React.Component {
         {
           id: 49,
           title: 'Принтеры чеков Xprinter K200L USB+WiFi   ',
-          img: '',
+          img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+WiFi ',
           category: 'printer',
           price: '6500сом'
@@ -405,7 +406,7 @@ class App extends React.Component {
         {
           id: 50,
           title: 'Принтеры чеков Xprinter K200L USB+LAN  ',
-          img: '',
+          img: 'xprinter-xp-k200l-80mm-direct-thermal-receipt-printer-usblan-black-230mm-s-eu-plug.jpg',
           desc: 'Xprinter K200L 80mm 230mm/s - USB+LAN ',
           category: 'printer',
           price: '4800сом'
@@ -413,7 +414,7 @@ class App extends React.Component {
         {
           id: 51,
           title: 'Принтеры чеков Xprinter Q80A ',
-          img: '',
+          img: '1f1d5e67fdc385ba0dba0dca95.jpeg',
           desc: 'Xprinter Q80A  80mm 230mm/s,Black-USB+LAN ',
           category: 'printer',
           price: '4500сом'
@@ -421,7 +422,7 @@ class App extends React.Component {
         {
           id: 52,
           title: 'Принтеры чеков Xprinter A160H ',
-          img: '',
+          img: '1-1200x800.jpg',
           desc: 'Xprinter A160H  ',
           category: 'printer',
           price: '4200сом'
@@ -429,7 +430,7 @@ class App extends React.Component {
         {
           id: 53,
           title: 'Принтеры чеков Xprinter Q200',
-          img: '',
+          img: 'XP-Q200-1200x800.jpg',
           desc: 'Xprinter Q200  ',
           category: 'printer',
           price: '6200сом'
@@ -437,7 +438,7 @@ class App extends React.Component {
         {
           id: 54,
           title: 'Принтеры чеков Xprinter A260',
-          img: '',
+          img: '1-1200x800.jpg',
           desc: 'Xprinter A260  ',
           category: 'printer',
           price: '7100сом'
@@ -445,238 +446,118 @@ class App extends React.Component {
         {
           id: 55,
           title: 'Принтеры чеков Xprinter N160II',
-          img: '',
+          img: 'printer-chekov-xprinter-xp-n160ii-80-mm-usb.jpg',
           desc: 'Xprinter N160II ',
           category: 'printer',
           price: '6500сом'
-        },
+        },  
         {
           id: 56,
-          title: 'Принтеры чеков XP-200W',
-          img: '',
-          desc: 'XP-200W ',
-          category: 'printer',
-          price: '6500сом'
-        },
-        {
-          id: 57,
-          title: 'Принтеры чеков Xprinter C260M',
-          img: '',
-          desc: ' C260M - USB+LAN+RS232 ',
-          category: 'printer',
-          price: '6800сом'
-        },
-        {
-          id: 58,
-          title: 'Принтер чеков - Xprinter 80mm XP-P810 - USB+Bluetooth',
-          img: '',
-          desc: 'Xprinter 80mm XP-P810 - USB+Bluetooth ',
-          category: 'printer',
-          price: '5700сом'
-        },
-        {
-          id: 59,
-          title: 'Принтер чеков мобильный - Xprinter XP-P801A',
-          img: '',
-          desc: 'Xprinter XP-P801A ',
-          category: 'printer',
-          price: '5700сом'
-        },
-        {
-          id: 60,
-          title: 'Принтер этикеток Xprinter XP-365B ',
-          img: '',
-          desc: 'Xprinter XP-365B ',
-          category: 'printer',
-          price: '3550сом'
-        },
-        {
-          id: 61,
-          title: 'Принтер этикеток Xprinter XP-365B  ',
-          img: '',
-          desc: '20-80mm receipt&label USB+LAN ',
-          category: 'printer',
-          price: '5800сом'
-        },
-        {
-          id: 62,
-          title: 'Термотрансферный принтер XPrinter-TT437B 300DPI',
-          img: '',
-          desc: ' XPrinter-TT437B 300DPI',
-          category: 'printer',
-          price: '15.000сом'
-        },
-        {
-          id: 63,
-          title: 'Термотрансферный принтер XPrinter-T451E 300DPI',
-          img: '',
-          desc: ' XPrinter-T451E 300DPI',
-          category: 'printer',
-          price: '17.900сом'
-        },
-        {
-          id: 64,
-          title: 'Термотрансферный принтер Xprinter XP-350B ',
-          img: '',
-          desc: ' Xprinter XP-350B ',
-          category: 'printer',
-          price: '5800сом'
-        },
-        {
-          id: 65,
-          title: 'Термотрансферный принтер Xprinter XP-370B  ',
-          img: '',
-          desc: ' Xprinter XP-370B  ',
-          category: 'printer',
-          price: '7000сом'
-        },
-        {
-          id: 66,
           title: 'Термотрансферный принтер Xprinter XP-480B   ',
-          img: '',
+          img: '1-500x400.jpg',
           desc: ' Xprinter XP-480B   ',
           category: 'printer',
           price: '8000сом'
         },
         {
-          id: 67,
+          id: 57,
           title: 'Термотрансферный принтер Xprinter XP-DT325B  ',
-          img: '',
+          img: '25b22fb328d0e8861ac903abfd.jpeg',
           desc: ' Xprinter XP-DT325B ',
           category: 'printer',
           price: '6500сом'
         },
         {
-          id: 68,
+          id: 58,
           title: 'Термотрансферный принтер Xprinter XP-Q371',
-          img: '',
+          img: 'xprinter-xp-q371.jpg',
           desc: ' Xprinter XP-Q371 ',
           category: 'printer',
           price: '4700сом'
         },
         {
-          id: 69,
+          id: 59,
           title: 'Термотрансферный принтер Xprinter XP-420B ',
-          img: '',
+          img: '15659464015634.webp',
           desc: ' Xprinter XP-420B  ',
           category: 'printer',
           price: '6500сом'
         },
         {
-          id: 70,
+          id: 60,
           title: 'Термотрансферный принтер Xprinter XP-DT425B ',
-          img: '',
+          img: 'xprinter-xp-dt425b.jpg',
           desc: ' Xprinter XP-DT425B ',
           category: 'printer',
           price: '6800сом'
         },
         {
-          id: 71,
+          id: 61,
           title: 'Термотрансферный принтер Xprinter XP-303B',
-          img: '',
+          img: 'bnt.jpeg',
           desc: 'Xprinter XP-303B ',
           category: 'printer',
           price: '5000сом'
         },
         {
-          id: 72,
+          id: 62,
           title: 'Термотрансферный принтер Xprinter 60mm XP-P210  ',
-          img: '',
+          img: 'ghj.webp',
           desc: 'Xprinter 60mm XP-P210 ',
           category: 'printer',
           price: '5000сом'
         },
         {
-          id: 73,
+          id: 63,
           title: 'Термотрансферный принтер Xprinter XP-237B  ',
-          img: '',
+          img: 'rty.jpg',
           desc: 'Xprinter XP-237B',
           category: 'printer',
           price: '3300сом'
         },
         {
-          id: 74,
+          id: 64,
           title: 'Термотрансферный принтер Xprinter подставка-держатель для больших рулонов этикеток ',
-          img: '',
+          img: 'ger.jpg',
           desc: 'Xprinter подставка-держатель для больших рулонов этикеток',
           category: 'printer',
           price: '950сом'
         },
         {
-          id: 75,
-          title: ' Звонок для принтера Кухонный звонок Xprinter X1',
-          img: '',
-          desc: 'Кухонный звонок Xprinter X1',
-          category: 'printer',
-          price: '1300сом'
-        },
-      
-        {
-          id: 76,
-          title: ' Кнопка вызова официанта XTC01 1-key черно-красный',
-          img: '',
-          desc: ' XTC01 1-key черно-красный',
-          category: 'knopca',
-          price: '420сом'
-        },
-        {
-          id: 77,
-          title: ' Кнопка вызова официанта CBC04 4-key черный',
-          img: '',
-          desc: '  CBC04 4-key черный',
-          category: 'knopca',
-          price: '470сом'
-        },
-        {
-          id: 78,
-          title: ' Кнопка вызова официанта XTC03 3-key черно-красный ',
-          img: '',
-          desc: '  XTC03 3-key черно-красный ',
-          category: 'knopca',
-          price: '450сом'
-        },
-        {
-          id: 79,
+          id: 67,
           title: ' Кнопка вызова официанта со стойкой XWP01 4-key белый  ',
-          img: '',
+          img: 'stoik.jpeg',
           desc: ' XWP01 4-key белый  ',
           category: 'knopca',
           price: '900сом'
         },
         {
-          id: 80,
+          id: 68,
           title: ' Кнопка вызова официанта XFCR03 3-key бело-красный  ',
-          img: '',
+          img: '121.jpg',
           desc: '  XFCR03 3-key бело-красный  ',
           category: 'knopca',
           price: '450сом'
         },
+
         {
-          id: 81,
-          title: ' Кнопка вызова официанта XFC03 3-key бело-черный  ',
-          img: '',
-          desc: '  XFC03 3-key бело-черный   ',
-          category: 'knopca',
-          price: '450сом'
-        },
-        {
-          id: 82,
+          id: 69,
           title: ' Кнопка вызова официанта CBFR01 1-key бело-красный  ',
-          img: '',
+          img: '12.jpg',
           desc: ' CBFR01 1-key бело-красный  ',
           category: 'knopca',
           price: '420сом'
         },
         {
-          id: 83,
+          id: 70,
           title: 'Кнопка вызова официанта CBFB01 1-key черно-белый  ',
-          img: '',
+          img: '21.jpg',
           desc: ' CBFB01 1-key черно-белый   ',
           category: 'knopca',
           price: '420сом'
         },
         {
-          id: 85,
+          id: 71,
           title: 'Сенсорные часы официанта, персонала (черные) - CAT01 ',
           img: '2.jpeg',
           desc: ' CAT01 ',
@@ -684,7 +565,7 @@ class App extends React.Component {
           price: '3900сом'
         },
         {
-          id: 86,
+          id: 72,
           title: 'Подставка для меню и кнопки вызова MC01 черная  ',
           img: '1.jpeg',
           desc: 'MC01 черная ',
@@ -692,7 +573,7 @@ class App extends React.Component {
           price: '270сом'
         },
         {
-          id: 88,
+          id: 73,
           title: 'Весы с печатью этикеток Rongta RLS1100 ',
           img: 'idina.png',
           desc: 'Весы Rongta RLS1100 с печатью этикеток (RS232+LAN)',
@@ -700,7 +581,7 @@ class App extends React.Component {
           price: '29.500сом'
         },
         {
-          id: 89,
+          id: 74,
           title: 'Дисплей покупателя внешний GS-LED8N USB  ',
           img: '568.jpeg',
           desc: ' GS-LED8N USB ',
@@ -708,7 +589,7 @@ class App extends React.Component {
           price: '4600сом'
         },
         {
-          id: 90,
+          id: 75,
           title: 'Сканер кодов  ZEBRA DS2208-SR  ',
           img: 'scar.jpg',
           desc: '  ZEBRA DS2208-SR  ',
@@ -716,7 +597,7 @@ class App extends React.Component {
           price: '6400сом'
         },
         {
-          id: 91,
+          id: 76,
           title: 'Подставка для сканера GOOSENECK INTELLISTAND - DS2208 BLACK ',
           img: 's.jpg',
           desc: ' GOOSENECK INTELLISTAND - DS2208 BLACK ',
@@ -724,7 +605,7 @@ class App extends React.Component {
           price: '950сом'
         },
         {
-          id: 92,
+          id: 77,
           title: 'Cканер штрих кодов Winson WNI-6710 USB ',
           img: '231.jpg',
           desc: '  Winson WNI-6710 USB ',
@@ -732,7 +613,7 @@ class App extends React.Component {
           price: '3000сом'
         },
         {
-          id: 93,
+          id: 78,
           title: 'Cканер штрих кодов Winson WAI-6780 USB ',
           img: '321.jpg',
           desc: '  Winson WAI-6780 USB ',
@@ -740,7 +621,7 @@ class App extends React.Component {
           price: '8500сом'
         },
         {
-          id: 94,
+          id: 79,
           title: 'Cканер штрих кодов Winson WAI-7000 USB  ',
           img: '321.jpg',
           desc: '  Winson WAI-7000 USB ',
@@ -748,7 +629,7 @@ class App extends React.Component {
           price: '11.700сом'
         },
         {
-          id: 95,
+          id: 80,
           title: 'Cканер штрих кодов Winson WAI-6510 USB  ',
           img: '1234.jpg',
           desc: ' Winson WAI-6510 USB ',
@@ -756,7 +637,7 @@ class App extends React.Component {
           price: '9100сом'
         },
         {
-          id: 96,
+          id: 81,
           title: 'Cканер штрих кодов Winson WNI-6712/V USB  ',
           img: '67.jpg',
           desc: '  Winson WNI-6712/V USB  ',
@@ -764,7 +645,7 @@ class App extends React.Component {
           price: '5500сом'
         },
         {
-          id: 97,
+          id: 82,
           title: 'Cканер штрих кодов Winson CMI-8010 USB ',
           img: '23.jpeg',
           desc: ' Winson CMI-8010 USB  ',
@@ -772,7 +653,7 @@ class App extends React.Component {
           price: '2250сом'
         },
         {
-          id: 98,
+          id: 83,
           title: 'Cканер штрих кодов Winson WAI-5770 ',
           img: '34.jpg',
           desc: 'Winson WAI-5770 ',
@@ -780,7 +661,7 @@ class App extends React.Component {
           price: '8500сом'
         },
         {
-          id: 99,
+          id: 84,
           title: 'Cканер штрих кодов Winson WNI-6383B/V USB ',
           img: '123.jpg',
           desc: 'WNI-6383B/V USB  ',
@@ -788,7 +669,7 @@ class App extends React.Component {
           price: '7500сом'
         },
         {
-          id: 100,
+          id: 85,
           title: 'Cканер штрих кодов Winson CMC-1871U',
           img: '1213.jpeg',
           desc: 'Winson CMC-1871U ',
@@ -796,7 +677,7 @@ class App extends React.Component {
           price: '1800сом'
         },
         {
-          id: 101,
+          id: 86,
           title: 'Cканер штрих кодов Winson WNI-6380g USB',
           img: '551.jpg',
           desc: ' Winson WNI-6380g USB ',
@@ -804,7 +685,7 @@ class App extends React.Component {
           price: '3700сом'
         },
         {
-          id: 102,
+          id: 87,
           title: 'Cканер штрих кодов Winson WNI-6213B USB ',
           img: '551.jpg',
           desc: ' Winson WNI-6213B USB ',
@@ -812,7 +693,7 @@ class App extends React.Component {
           price: '9200сом'
         },
         {
-          id: 103,
+          id: 88,
           title: 'Cканер штрих кодов Winson CMI-8012B/Z USB ',
           img: '551.jpg',
           desc: ' Winson CMI-8012B/Z USB ',
@@ -820,7 +701,7 @@ class App extends React.Component {
           price: '5300сом'
         },
         {
-          id: 104,
+          id: 89,
           title: 'Cканер штрих кодов Winson Z13P-510 ',
           img: '551.jpg',
           desc: ' Winson Z13P-510  ',
@@ -828,7 +709,7 @@ class App extends React.Component {
           price: '2700сом'
         },
         {
-          id: 105,
+          id: 90,
           title: 'Cканер штрих кодов Winson WNI-S014P USB 3в1 ',
           img: '551.jpg',
           desc: ' Winson WNI-S014P USB 3в1 ',
@@ -836,7 +717,7 @@ class App extends React.Component {
           price: '3450сом'
         },
         {
-          id: 106,
+          id: 91,
           title: 'Cканер штрих кодов Winson  WNI-S742BU-USB ',
           img: '551.jpg',
           desc: '  WNI-S742BU-USB ',
@@ -844,7 +725,7 @@ class App extends React.Component {
           price: '5800сом'
         },
         {
-          id: 107,
+          id: 92,
           title: 'Cканер штрих кодов Winson WNI-8014P USB ',
           img: 'chek.png',
           desc: ' Winson WNI-8014P USB',
@@ -852,7 +733,7 @@ class App extends React.Component {
           price: '8000сом'
         },
         {
-          id: 108,
+          id: 93,
           title: 'Денежный ящик АТ210 ',
           img: '76.jpeg',
           desc: 'Ш20см*Д30см*В10см, 4-лот. для купюр, 6-ячеек для монет, RJ11 интерфейс (режим авто-открывания) Черный',
@@ -860,7 +741,7 @@ class App extends React.Component {
           price: '3000сом'
         },
         {
-          id: 109,
+          id: 94,
           title: 'Денежный Ящик GS-170',
           img: 'cash-pg.jpg',
           desc: 'Ш46см*Д17см*В10см, 2 бокса с замками, 6-лот. для купюр, 8-ячеек для монет, RJ11 интерфейс, Voltage:12V 24V, Черный',
@@ -868,7 +749,7 @@ class App extends React.Component {
           price: '4900сом'
         },
         {
-          id: 110,
+          id: 95,
           title: 'Денежный Ящик GS-410B',
           img: '34343.webp',
           desc: ' Ш41см*Д42см*В10см, 7-заж. для купюр, 4-ячеек для монет, RJ11 интерфейс, Черный ',
@@ -876,22 +757,14 @@ class App extends React.Component {
           price: '4500сом'
         },
         {
-          id: 111,
+          id: 96,
           title: 'Денежный Ящик GS-330A ',
           img: '34343.webp',
           desc: ' Ш33см*Д36см*В9см, 4-заж. для купюр, 4-ячеек для монет, RJ11 интерфейс, Черный  ',
           category: 'drawers',
           price: '3500сом'
         },
-        {
-          id: 112,
-          title: 'Денежный Ящик at-405w ',
-          img: '4867.970.jpg',
-          desc: 'Ш41см*Д42см*В10см, 6-заж. для купюр, 3-ячеек для монет, RJ11 интерфейс, БЕЛЫЙ ',
-          category: 'drawers',
-          price: '4200сом'
-        },  
-      ],
+      ],
 
       currentItems: [],
       showFullItem: false,
@@ -935,7 +808,7 @@ class App extends React.Component {
 
   onShowItem(item) {
     this.setState({ fullItem: item });
-    this.setState({ showFullItem: !this.state.showFullItem });
+    this.setState( onclick={ showFullItem: !this.state.showFullItem });
   }
 
   choseCategory(category) {

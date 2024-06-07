@@ -160,7 +160,7 @@ transform: scale(1.5);
   background-position: center center;
   background-blend-mode: multiply;
   background-color: aliceblue;
-  transition: transform 0.5s ease; 
+  transition: left 1s ease; 
 }
 
 
@@ -170,33 +170,34 @@ transform: scale(1.5);
 }
 
 .sidebar {
-  position: fixed;
+  position: fixed;  
   color: #1d1d1e;
   top: 0;
-  right: -500px;
+  left:-400px;
   width: 300px;
   height: 100%;
   background: #5b5b5b;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease;
+  transition: left 0.3s ease;
   padding: 20px;
   z-index: 1000;
 }
 
 .sidebar.open {
-  right: 0;
+  left: 0;
 }
 
 .kat{
   list-style: none; 
+  position: absolute;
   color: #1d1d1e;
   cursor: pointer;
-  
   border-radius: 5px;
   border: 1px solid transparent;
   transition: all 500ms ease;
   width: 50px;
   padding: 3px;
+  right: 40px;
 }
 
 .kat:hover{
@@ -332,6 +333,7 @@ header .shop-cart .summa{
 
 .categories div{
   background: #8d8d8d;
+  top:20px;
   color: #1d1d1e;
   border-radius: 5px;
   padding: 10px 10px;
@@ -503,5 +505,46 @@ main .add-to-cart:hover,
   max-width: 100%; 
   padding-right: 15px; 
   padding-left: 15px; 
+}
+
+.reviews-section{
+  color: #1d1d1e;
+  padding: 20px;
+
+}
+
+.reviews-section:hover{
+  color: #1d1d1e;
+  padding: 20px;
+  list-style: none  ;
+
+}
+
+
+.add-review{
+  border-radius: 5px;
+  background-color: 1px white;
+  list-style: none;
+}
+
+.reviews-list{
+  display: flex;
+align-content: space-between;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+}
+.li-dob{
+  list-style: none;
+  padding: 4px;
+}
+
+.li-dob:hover{
+  background: yellow;
+  color: #1d1d1e;
+  width: 90px;
+  border-radius: 5px;
+  font-weight: 300;
+  padding: 4px;
 }
 
